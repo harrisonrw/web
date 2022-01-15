@@ -47,18 +47,14 @@ googleAnalytics = "UA-40538920-1"
     name = "Twitter"
     icon = "fab fa-twitter fa-2x"
     weight = 4
-    url = "https://twitter.com/robwh99/"
+    url = "https://twitter.com/rwhtech/"
 
 # Menu links
 [[menu.main]]
-    name = "Blog"
-    weight = 1
-    url  = "/posts/"
-[[menu.main]]
     name = "Projects"
-    weight = 2
+    weight = 1
     url = "/projects/"
 [[menu.main]]
     name = "About"
-    weight = 3
+    weight = 2
     url = "/about/"
