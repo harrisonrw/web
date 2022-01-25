@@ -15,8 +15,8 @@ googleAnalytics = "UA-40538920-1"
 [params]
     author = "Robert Harrison"
     info = "iOS Developer"
-    description = "San Diego based Software Developer. Specialized in iOS and Swift. Owner of RWH Technology and Mobile Developer at University of San Diego."
-    keywords = "blog,developer,personal"
+    description = "San Diego based Software Developer. Owner of RWH Technology, providing mobile app development and consulting services."
+    keywords = "blog,developer,personal,ios,swift"
     avatarurl = "images/avatar.png"
 
     hidecredits = false
@@ -47,7 +47,7 @@ googleAnalytics = "UA-40538920-1"
     name = "Twitter"
     icon = "fab fa-twitter fa-2x"
     weight = 4
-    url = "https://twitter.com/rwhtech/"
+    url = "https://twitter.com/robwh99/"
 
 # Menu links
 [[menu.main]]
