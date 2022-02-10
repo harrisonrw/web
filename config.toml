@@ -35,17 +35,17 @@ googleAnalytics = "UA-40538920-1"
     url = "mailto:harrisonrw@gmail.com"
 [[params.social]]
     name = "Github"
-    icon = "fab fa-github fa-2x"
+    icon = "fa fa-2x fa-github"
     weight = 2
     url = "https://github.com/harrisonrw/"
 [[params.social]]
     name = "LinkedIn"
-    icon = "fab fa-linkedin fa-2x"
+    icon = "fa fa-2x fa-linkedin"
     weight = 3
     url = "https://www.linkedin.com/in/robert-harrison-6a457a2b/"
 [[params.social]]
     name = "Twitter"
-    icon = "fab fa-twitter fa-2x"
+    icon = "fa fa-2x fa-twitter"
     weight = 4
     url = "https://twitter.com/robwh99/"
 
