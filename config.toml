@@ -25,7 +25,7 @@ googleAnalytics = "UA-40538920-1"
     rtl = false
 
     math = false
-    custom_css = ["css/custom.css"]
+    customSCSS = ["scss/style.css"]
 
 # Social links
 [[params.social]]
