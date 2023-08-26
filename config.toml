@@ -15,9 +15,9 @@ googleAnalytics = "UA-40538920-1"
 [params]
     author = "Robert Harrison"
     info = "Software Engineer"
-    description = "iOS and macOS app development"
+    description = "iOS + macOS App Development"
     keywords = "blog,developer,personal,ios,macos,swift"
-    avatarurl = "images/avatar.png"
+    avatarurl = "images/avatar3.jpeg"
 
     hidecredits = false
     hidecopyright = false
