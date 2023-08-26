@@ -14,9 +14,9 @@ googleAnalytics = "UA-40538920-1"
 
 [params]
     author = "Robert Harrison"
-    info = "iOS Developer"
-    description = "San Diego based Software Developer. Owner of RWH Technology, providing mobile app development and consulting services."
-    keywords = "blog,developer,personal,ios,swift"
+    info = "Software Engineer"
+    description = "iOS and macOS app development"
+    keywords = "blog,developer,personal,ios,macos,swift"
     avatarurl = "images/avatar.png"
 
     hidecredits = false
@@ -43,11 +43,6 @@ googleAnalytics = "UA-40538920-1"
     icon = "fa fa-2x fa-linkedin"
     weight = 3
     url = "https://www.linkedin.com/in/robert-harrison-6a457a2b/"
-[[params.social]]
-    name = "Twitter"
-    icon = "fa fa-2x fa-twitter"
-    weight = 4
-    url = "https://twitter.com/robwh99/"
 
 # Menu links
 [[menu.main]]
