@@ -1,6 +1,6 @@
 +++
 title = "Voice Cloning using Tortoise-TTS on Apple Silicon"
-date = 2024-11-16T13:29:00-07:00
+date = 2024-11-17T14:48:00-07:00
 tags = ["AI", "ML", "TTS", "Python"]
 +++
 Voice cloning is a process that uses AI to replicate a person's voice. The AI is trained on audio samples of a person's voice to learn their speaking patterns. Once trained, the AI can generate speech that sounds like the original person.
@@ -14,16 +14,16 @@ Here are five practical uses of voice cloning:
 
 There is a lot of power that comes with using voice cloning technology. Please use it responsibly.
 
-This article describes how to clone your own voice using [Tortoise-TTS](https://github.com/neonbjb/tortoise-tts) on Apple Silicon. Tortoise-TTS is a text-to-speech (TTS) system that has voice cloning capabilities. As an iOS developer, I do all my programming on Apple Silicon devices. I wanted to share what I've learned in getting Tortoise-TTS setup and running on Apple Silicon, as I ran into some issues along the way.
+This article describes how to clone your voice using [Tortoise-TTS](https://github.com/neonbjb/tortoise-tts) on Apple Silicon. Tortoise-TTS is a text-to-speech (TTS) system with voice cloning capabilities. As an iOS developer, I do all my programming on Apple Silicon devices. I wanted to share what I've learned in getting Tortoise-TTS set up and running on Apple Silicon, as I ran into some issues along the way.
 
-## Prerequistes
+## Prerequisites
 * Apple Silicon laptop or desktop.
 * [Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html) (recommend MiniConda).
 * Recordings of your voice.
 
 Manually managing dependencies in Python projects is a nightmare :scream:. Conda is a package and environment management system. I recommend using MiniConda, which is a minimal version of the Conda installer. I installed MiniConda using [HomeBrew](https://formulae.brew.sh/cask/miniconda).
 
-To train the AI model, you will need some recordings of your voice. I used [Audacity](https://www.audacityteam.org) to record myself reading a few paragraphs from a book. A larger dataset will result in a better trained model. For testing purposes, 5 recordings should be enough.
+To train the AI model, you will need to record your voice. I used [Audacity](https://www.audacityteam.org) to record myself reading a few paragraphs from a book. A larger dataset will result in a better-trained model. For testing purposes, five recordings should be enough.
 
 A few notes on audio recording settings:
 * Sample Rate = 22050 Hz
@@ -33,7 +33,7 @@ A few notes on audio recording settings:
 
 ## Install Tortoise-TTS
 
-Create a new conda environment, named **tortoise** and then activate it. The default Python on my system is version 3.12, which is incompatible with certain packages used by Tortoise-TTS. According to the docs, we need to use Python 3.10. We also need to install the **numba**, **inflect** and **psutil** packages in the environment.
+Create a new conda environment, named **tortoise**. Then activate the environment. The default Python on my system is version 3.12, which is incompatible with certain packages used by Tortoise-TTS. According to the docs, we need to use Python 3.10. We also need to install the **numba**, **inflect**, and **psutil** packages in the environment.
 ```
 conda create --name tortoise python=3.10 numba inflect psutil
 conda activate tortoise
@@ -49,7 +49,7 @@ After PyTorch is installed, install the **transformers** package:
 pip install transformers
 ```
 
-Clone the Tortoise-TTS repo and change to it's directory:
+Clone the Tortoise-TTS repo and change the directory to **tortoise-tts**:
 ```
 git clone https://github.com/neonbjb/tortoise-tts.git
 cd tortoise-tts
@@ -89,11 +89,11 @@ Successfully built tortoise-tts
 
 ## Prepare audio files for training
 
-If not already done so, record your voice (see the Prerequisists section above for some tips). 
+Record your voice. See the Prerequisites section above for some tips. 
 
 In the **tortoise-tts** directory, navigate to the **tortoise/voices** directory. There are several sub-directories, containing .wav files for various default voices for Tortoise.
 
-Create a new directory and then copy your voice recordings to it. I named the directory `robert`, and it contains 5 samples of myself speaking.
+Create a new directory for your voice recordings. I named the directory `robert`. Then copy your voice recordings to it. My directory contains five samples of myself speaking.
 ```
 ~/Projects/Personal/tortoise-tts/tortoise/voices/robert
 tortoise ❯ ll
@@ -108,7 +108,7 @@ total 10056
 ## Generate Speech
 Now we are ready to write a Python program to clone our voice.
 
-In the **tortoise-tts** directory, create a **clone_voice.py** file with the following contents. It's a slimmed down version of the [notebook](https://github.com/neonbjb/tortoise-tts/blob/main/tortoise_tts.ipynb) in the tortoise-tts repo.
+In the **tortoise-tts** directory, create a **clone_voice.py** file with the following contents. It's a slimmed-down version of the [notebook](https://github.com/neonbjb/tortoise-tts/blob/main/tortoise_tts.ipynb) in the tortoise-tts repo. Update the **text** and **voice** variables.
 ```
 # Import PyTorch and Tortoise.
 import torch
@@ -143,29 +143,19 @@ Now run the program:
 python clone_voice.py
 ```
 
-Depending on your system, sample voice recordings, and text, it may take several minutes for it to complete. Be patient. On my M1 Mac Mini, for example, it took over 14 minutes to complete.
+Depending on your system, sample voice recordings, and text, the cloning process may take several minutes. Be patient. My M1 Mac Mini, for example, took over 13 minutes to complete.
 
 ![voice-clone-output](/images/blog/voice-cloning-tortoise-tts-apple-silicon/clone-voice-output.png)
 
-When it's finished, there will be a **generated-[custom_voice].wav** file in the **tortoise-tts** directory. For example, **generated-robert.wav**. Play the generated wav file. How does it sound? Experiment with different text and preset options.
+When the cloning has finished, the **tortoise-tts** directory should contain a **generated-[custom_voice].wav** file. Play the generated WAV file. How does it sound? Experiment with different text and preset options.
 
 ## Performance
 
-I thought it would be interesting to compare performance of M1 vs M3. Please note, it's not a straight hardware comparison, due to other factors, including memory differences. Nonetheless, it was interesting to see just how much faster the M3 machine was at computing the best candidates.
+I compared the voice cloning performance of an M1 Mac Mini, to an M3 MacBook Air. Please note, it's not a straight hardware comparison, due to other factors, including memory differences. Nonetheless, it was interesting to see how much faster the M3 machine was at computing the best candidates.
 
-M1
-* Generating autoregressive samples: 7:33
-* Computing best candidates using CLVP: 25:29
-* Transforming autoregressive outputs into audio: 00:35
-* Total Time: 34m 49s
-
-M3
-* Generating autoregressive samples:  4:53
-* Computing best candidates using CLVP: 00:13
-* Transforming autoregressive outputs into audio: 00:27
-* Total Time: 7m 19s
+![performance-table](/images/blog/voice-cloning-tortoise-tts-apple-silicon/performance-table.png)
 
 ## Conclusion
-With some setup and a little bit of code, it's very easy to clone your own voice using AI. It should be possible to improve the quality of the voice with a larger dataset (more recordings of your voice). The performance of M3 vs M1 is impressive and I would be interested in comparing with the new M4 Mac Mini :smiley:. And finally, remember to use this technology responsibily.
+With some setup and less than 30 lines of code, it's easy to clone your voice using AI. A larger dataset (more recordings of your voice) should improve the quality of the cloned voice. The performance comparison of M3 vs M1 is impressive. I would be interested in a comparison with the new M4 Mac Mini :smiley:. Finally, remember to use this technology responsibly.
 
 Thank you for reading.
