@@ -12,6 +12,8 @@ pygmentscodefencesguesssyntax = true
 
 googleAnalytics = "UA-40538920-1"
 
+enableEmoji = true
+
 [params]
     author = "Robert Harrison"
     info = "Software Engineer"
