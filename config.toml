@@ -17,8 +17,8 @@ enableEmoji = true
 [params]
     author = "Robert Harrison"
     info = "Software Engineer"
-    description = "iOS + macOS App Development"
-    keywords = "blog,developer,personal,ios,macos,swift"
+    description = "iOS + watchOS + macOS App Development"
+    keywords = "blog,developer,software,personal,iOS,watchOS,macOS,swift"
     avatarurl = "images/avatar3.jpeg"
 
     hidecredits = false
@@ -45,6 +45,11 @@ enableEmoji = true
     icon = "fa fa-2x fa-linkedin"
     weight = 3
     url = "https://www.linkedin.com/in/robert-harrison-6a457a2b/"
+[[params.social]]
+    name = "BlueSky"
+    icon = "fa-brands fa-2x fa-bluesky"
+    weight = 4
+    url = "https://bsky.app/profile/harrisonrw.bsky.social"
 
 # Menu links
 [[menu.main]]
