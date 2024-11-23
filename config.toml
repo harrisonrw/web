@@ -17,9 +17,9 @@ enableEmoji = true
 [params]
     author = "Robert Harrison"
     info = "Software Engineer"
-    description = "iOS + watchOS + macOS App Development"
-    keywords = "blog,developer,software,personal,iOS,watchOS,macOS,swift"
-    avatarurl = "images/avatar3.jpeg"
+    description = "iOS + watchOS + macOS"
+    keywords = "blog,app,developer,software,personal,iOS,watchOS,macOS,swift"
+    avatarurl = "images/rharrison-500px.jpg"
 
     hidecredits = false
     hidecopyright = false
