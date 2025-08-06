@@ -218,11 +218,20 @@ img[src$='#floatright']
         padding: 2rem 1rem;
         flex-direction: column;
         gap: 2rem;
+        align-items: center;
     }
     
     .hero-content {
         flex-direction: column;
         text-align: center;
+        gap: 2rem;
+        align-items: center;
+    }
+    
+    .hero-text {
+        width: 100%;
+        order: 1;
+        align-items: center;
     }
     
     .hero-title {
@@ -237,7 +246,19 @@ img[src$='#floatright']
         width: 100%;
         max-width: 300px;
         height: 300px;
-        margin: 0;
+        margin: 0 !important;
+        order: 2;
+        flex-shrink: 0;
+    }
+    
+    .placeholder-image {
+        height: 300px !important;
+    }
+    
+    .phone-mockup {
+        width: 200px !important;
+        height: 300px !important;
+        margin: 0 auto;
     }
 }
 
@@ -253,5 +274,19 @@ img[src$='#floatright']
     .hero-image {
         max-width: 250px;
         height: 250px;
+        margin: 0 !important;
+    }
+    
+    .placeholder-image {
+        height: 250px !important;
+    }
+    
+    .phone-mockup {
+        width: 180px !important;
+        height: 250px !important;
+    }
+    
+    .hero-container {
+        padding: 1.5rem 1rem;
     }
 }
