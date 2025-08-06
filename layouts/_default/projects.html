@@ -1,0 +1,52 @@
+{{ define "title" }}
+  {{ .Title }} · {{ .Site.Title }}
+{{ end }}
+{{ define "content" }}
+  <section class="container page">
+    <article>
+      <!-- Page Title -->
+      <header>
+        <h1 class="title">
+          <a class="title-link" href="{{ .Permalink | safeURL }}">
+            {{ .Title }}
+          </a>
+        </h1>
+      </header>
+      
+      <!-- Hero Section -->
+      <div class="hero-section">
+        <div class="hero-container">
+          <div class="hero-content">
+            <div class="hero-text">
+              <h1 class="hero-title">Thrive: Financial Intelligence</h1>
+              <p class="hero-subtitle">AI-driven personal finance app for iOS.</p>
+              <a href="#" class="hero-cta">Learn More</a>
+            </div>
+            <div class="hero-image">
+              <div class="placeholder-image">
+                <div class="phone-mockup">
+                  <div class="phone-screen">
+                    <div class="app-interface">
+                      <div class="status-bar"></div>
+                      <div class="app-header">Thrive</div>
+                      <div class="chart-placeholder"></div>
+                      <div class="buttons">
+                        <div class="button"></div>
+                        <div class="button"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Projects Content -->
+      {{ .Content }}
+    </article>
+  </section>
+  
+  {{ partial "posts/math.html" . }}
+{{ end }}

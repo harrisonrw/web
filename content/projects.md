@@ -1,7 +1,8 @@
 +++
 date = 2019-05-20
 title = "Projects" 
-slug = "projects" 
+slug = "projects"
+layout = "projects"
 +++
 # SpeakColors
 ![SpeakColors](/images/speakcolors.png)
