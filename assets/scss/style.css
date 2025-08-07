@@ -52,7 +52,7 @@ img[src$='#floatright']
 }
 
 .hero-title {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: bold;
     color: #333;
     margin: 0;
@@ -60,7 +60,7 @@ img[src$='#floatright']
 }
 
 .hero-subtitle {
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     color: #666;
     margin: 0;
     line-height: 1.4;
@@ -86,8 +86,8 @@ img[src$='#floatright']
 
 .hero-image {
     flex-shrink: 0;
-    width: 500px;
-    height: 500px;
+    width: 400px;
+    height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -98,112 +98,6 @@ img[src$='#floatright']
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-}
-
-/* Phone Mockup Placeholder */
-.placeholder-image {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.phone-mockup {
-    width: 250px;
-    height: 450px;
-    background: linear-gradient(145deg, #1e1e1e, #2d2d2d);
-    border-radius: 40px;
-    padding: 15px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    position: relative;
-}
-
-.phone-mockup::before {
-    content: '';
-    position: absolute;
-    top: 25px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 6px;
-    background: #333;
-    border-radius: 3px;
-}
-
-.phone-screen {
-    width: 100%;
-    height: 100%;
-    background: #f8f9fa;
-    border-radius: 25px;
-    overflow: hidden;
-}
-
-.app-interface {
-    padding: 20px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.status-bar {
-    height: 20px;
-    background: linear-gradient(90deg, #007acc, #00a86b);
-    margin: -20px -20px 20px -20px;
-}
-
-.app-header {
-    font-size: 24px;
-    font-weight: bold;
-    color: #007acc;
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.chart-placeholder {
-    flex: 1;
-    background: linear-gradient(135deg, #007acc20, #00a86b20);
-    border-radius: 15px;
-    margin-bottom: 20px;
-    position: relative;
-}
-
-.chart-placeholder::after {
-    content: '📊';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 3rem;
-    opacity: 0.7;
-}
-
-.buttons {
-    display: flex;
-    gap: 15px;
-    justify-content: space-between;
-}
-
-.button {
-    flex: 1;
-    height: 45px;
-    background: linear-gradient(135deg, #007acc, #005a9b);
-    border-radius: 22px;
-    position: relative;
-}
-
-.button::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 20px;
-    height: 20px;
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 50%;
 }
 
 /* Responsive Design */
