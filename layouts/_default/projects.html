@@ -17,13 +17,54 @@
       <div class="hero-section">
         <div class="hero-container">
           <div class="hero-content">
-            <div class="hero-text">
-              <h1 class="hero-title">Thrive: Financial Intelligence</h1>
-              <p class="hero-subtitle">AI-driven personal finance app for iOS.</p>
-              <a href="#" class="hero-cta">Learn More</a>
+            <div class="hero-carousel">
+              <div class="carousel-slides">
+                <!-- Slide 1 -->
+                <div class="carousel-slide active" data-slide="0">
+                  <div class="hero-text">
+                    <h1 class="hero-title">Thrive: Financial Intelligence</h1>
+                    <p class="hero-subtitle">AI-driven personal finance app for iOS.</p>
+                    <a href="#" class="hero-cta">Learn More</a>
+                  </div>
+                  <div class="hero-image">
+                    <img src="/images/thrive-hero.png" alt="Thrive" />
+                  </div>
+                </div>
+                
+                <!-- Slide 2 -->
+                <div class="carousel-slide" data-slide="1">
+                  <div class="hero-text">
+                    <h1 class="hero-title">SpeakColors</h1>
+                    <p class="hero-subtitle">iPad app for helping children increase vocabulary skills and language.</p>
+                    <a href="https://rwhtechnology.com/apps/speakcolors" class="hero-cta">Learn More</a>
+                  </div>
+                  <div class="hero-image">
+                    <img src="/images/thrive-hero.png" alt="SpeakColors" />
+                  </div>
+                </div>
+                
+                <!-- Slide 3 -->
+                <div class="carousel-slide" data-slide="2">
+                  <div class="hero-text">
+                    <h1 class="hero-title">Beat Tracker</h1>
+                    <p class="hero-subtitle">iPhone app for tracking and exporting heart rate data from Health.</p>
+                    <a href="https://rwhtechnology.com/apps/beat-tracker" class="hero-cta">Learn More</a>
+                  </div>
+                  <div class="hero-image">
+                    <img src="/images/thrive-hero.png" alt="Beat Tracker" />
+                  </div>
+                </div>
+              </div>
+              
             </div>
-            <div class="hero-image">
-              <img src="/images/thrive-hero.png" alt="Thrive" />
+            
+            <!-- Carousel Controls positioned outside carousel -->
+            <div class="carousel-controls">
+              <div class="carousel-dots">
+                <button class="carousel-dot active" onclick="currentSlide(1)"></button>
+                <button class="carousel-dot" onclick="currentSlide(2)"></button>
+                <button class="carousel-dot" onclick="currentSlide(3)"></button>
+              </div>
             </div>
           </div>
         </div>
@@ -35,4 +76,7 @@
   </section>
   
   {{ partial "posts/math.html" . }}
+  
+  <!-- Carousel JavaScript -->
+  <script src="/js/carousel.js"></script>
 {{ end }}

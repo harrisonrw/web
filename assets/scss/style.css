@@ -38,10 +38,85 @@ img[src$='#floatright']
 
 .hero-content {
     width: 100%;
+    position: relative;
+}
+
+/* Carousel Styles */
+.hero-carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-slides {
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
+
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 2rem;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+}
+
+.carousel-slide .hero-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.carousel-slide .hero-image {
+    flex-shrink: 0;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+/* Carousel Controls */
+.carousel-controls {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 2.5rem;
+    margin-left: 0;
+}
+
+
+.carousel-dots {
+    display: flex;
+    flex-direction: row;
+    gap: 0.75rem;
+}
+
+.carousel-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(0, 122, 204, 0.3);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-dot.active,
+.carousel-dot:hover {
+    background: rgba(0, 122, 204, 1);
 }
 
 .hero-text {
@@ -97,7 +172,7 @@ img[src$='#floatright']
 .hero-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 /* Responsive Design */
@@ -110,22 +185,34 @@ img[src$='#floatright']
     .hero-container {
         height: auto;
         padding: 2rem 1rem;
-        flex-direction: column;
-        gap: 2rem;
         align-items: center;
     }
     
-    .hero-content {
+    .carousel-slides {
+        height: auto;
+        min-height: 400px;
+    }
+    
+    .carousel-slide {
         flex-direction: column;
         text-align: center;
         gap: 2rem;
-        align-items: center;
+        position: relative;
     }
     
-    .hero-text {
+    .carousel-slide .hero-text {
         width: 100%;
         order: 1;
         align-items: center;
+    }
+    
+    .carousel-slide .hero-image {
+        width: 100%;
+        max-width: 300px;
+        height: 300px;
+        margin: 0 !important;
+        order: 2;
+        flex-shrink: 0;
     }
     
     .hero-title {
@@ -136,23 +223,17 @@ img[src$='#floatright']
         font-size: 1rem;
     }
     
-    .hero-image {
-        width: 100%;
-        max-width: 300px;
-        height: 300px;
-        margin: 0 !important;
-        order: 2;
-        flex-shrink: 0;
+    .carousel-controls {
+        position: static;
+        transform: none;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 1rem;
     }
     
-    .placeholder-image {
-        height: 300px !important;
-    }
-    
-    .phone-mockup {
-        width: 200px !important;
-        height: 300px !important;
-        margin: 0 auto;
+    .carousel-dots {
+        flex-direction: row;
+        gap: 0.5rem;
     }
 }
 
@@ -165,22 +246,17 @@ img[src$='#floatright']
         font-size: 0.9rem;
     }
     
-    .hero-image {
-        max-width: 250px;
-        height: 250px;
+    .carousel-slide .hero-image {
+        max-width: 250px !important;
+        height: 250px !important;
         margin: 0 !important;
-    }
-    
-    .placeholder-image {
-        height: 250px !important;
-    }
-    
-    .phone-mockup {
-        width: 180px !important;
-        height: 250px !important;
     }
     
     .hero-container {
         padding: 1.5rem 1rem;
+    }
+    
+    .carousel-slides {
+        min-height: 350px;
     }
 }
