@@ -24,7 +24,7 @@ img[src$='#floatright']
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 0 2rem 0;
+    margin: 2rem 0 2rem 0;
 }
 
 .hero-container {
@@ -33,7 +33,7 @@ img[src$='#floatright']
     background-color: #F5F5F5;
     display: flex;
     align-items: center;
-    padding: 0 2rem;
+    padding: 2rem;
 }
 
 .hero-content {
@@ -190,14 +190,14 @@ img[src$='#floatright']
     
     .carousel-slides {
         height: auto;
-        min-height: 400px;
+        min-height: 300px;
     }
     
     .carousel-slide {
         flex-direction: column;
         text-align: center;
         gap: 2rem;
-        position: relative;
+        position: absolute;
     }
     
     .carousel-slide .hero-text {
@@ -253,10 +253,11 @@ img[src$='#floatright']
     }
     
     .hero-container {
-        padding: 1.5rem 1rem;
+        padding: 1rem;
     }
     
     .carousel-slides {
-        min-height: 350px;
+        height: auto;
+        min-height: 280px;
     }
 }
