@@ -329,14 +329,36 @@ img[src$='#floatright']
 }
 
 .project-category {
-    background: #f0f6ff;
-    color: #0969da;
     padding: 0.25rem 0.75rem;
     border-radius: 16px;
     font-size: 0.8rem;
     font-weight: 500;
     display: inline-block;
     margin-top: auto;
+}
+
+/* Category Colors */
+.project-category {
+    background: #f0f6ff;
+    color: #0969da;
+}
+
+.projects-grid .project-card:nth-child(1) .project-category,
+.projects-grid .project-card .project-category:contains("Finance") {
+    background: #f0f9f0;
+    color: #0d7a0d;
+}
+
+.projects-grid .project-card:nth-child(2) .project-category,
+.projects-grid .project-card .project-category:contains("Media") {
+    background: #fff5f5;
+    color: #c53030;
+}
+
+.projects-grid .project-card:nth-child(3) .project-category,
+.projects-grid .project-card .project-category:contains("Healthcare") {
+    background: #fdf5e6;
+    color: #d69e2e;
 }
 
 /* Responsive Grid */
