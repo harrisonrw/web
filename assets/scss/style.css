@@ -329,13 +329,20 @@ img[src$='#floatright']
     font-size: 1.4rem;
 }
 
+.project-footer {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
 .project-category {
     padding: 0.25rem 0.75rem;
     border-radius: 16px;
     font-size: 0.8rem;
     font-weight: 500;
     display: inline-block;
-    margin-top: auto;
+    width: fit-content;
 }
 
 /* Category Colors */
@@ -360,6 +367,26 @@ img[src$='#floatright']
 .projects-grid .project-card .project-category:contains("Healthcare") {
     background: #fdf5e6;
     color: #d69e2e;
+}
+
+.project-learn-more {
+    display: block;
+    background-color: #007acc;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.project-learn-more:hover {
+    background-color: #005a9b;
+    color: white;
+    text-decoration: none;
 }
 
 /* Responsive Grid */
