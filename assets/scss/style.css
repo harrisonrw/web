@@ -337,9 +337,9 @@ img[src$='#floatright']
 }
 
 .project-category {
-    padding: 0.25rem 0.75rem;
-    border-radius: 16px;
-    font-size: 0.8rem;
+    padding: 0.1rem 0.75rem;
+    border-radius: 8px;
+    font-size: 1rem;
     font-weight: 500;
     display: inline-block;
     width: fit-content;
@@ -351,22 +351,52 @@ img[src$='#floatright']
     color: #0969da;
 }
 
-.projects-grid .project-card:nth-child(1) .project-category,
-.projects-grid .project-card .project-category:contains("Finance") {
+/* Finance - Green */
+.projects-grid .project-card:nth-child(1) .project-category {
     background: #f0f9f0;
     color: #0d7a0d;
 }
 
-.projects-grid .project-card:nth-child(2) .project-category,
-.projects-grid .project-card .project-category:contains("Media") {
+/* Photo & Video - Red */
+.projects-grid .project-card:nth-child(2) .project-category {
     background: #fff5f5;
     color: #c53030;
 }
 
-.projects-grid .project-card:nth-child(3) .project-category,
-.projects-grid .project-card .project-category:contains("Healthcare") {
+/* Medical - Orange */
+.projects-grid .project-card:nth-child(3) .project-category {
     background: #fdf5e6;
     color: #d69e2e;
+}
+
+/* Education - Blue */
+.projects-grid .project-card:nth-child(4) .project-category,
+.projects-grid .project-card:nth-child(5) .project-category,
+.projects-grid .project-card:nth-child(7) .project-category,
+.projects-grid .project-card:nth-child(11) .project-category,
+.projects-grid .project-card:nth-child(12) .project-category {
+    background: #f0f6ff;
+    color: #0969da;
+}
+
+/* Health - Purple */
+.projects-grid .project-card:nth-child(6) .project-category {
+    background: #f3f0ff;
+    color: #7c3aed;
+}
+
+/* Productivity - Teal */
+.projects-grid .project-card:nth-child(8) .project-category,
+.projects-grid .project-card:nth-child(9) .project-category,
+.projects-grid .project-card:nth-child(13) .project-category {
+    background: #f0fdfa;
+    color: #0d9488;
+}
+
+/* Social - Pink */
+.projects-grid .project-card:nth-child(10) .project-category {
+    background: #fdf2f8;
+    color: #ec4899;
 }
 
 .project-learn-more {
