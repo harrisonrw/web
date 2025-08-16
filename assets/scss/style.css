@@ -308,15 +308,15 @@ img[src$='#floatright']
 }
 
 .project-name {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: 600;
     color: #333;
-    margin: 0 0 0.25rem 0;
+    margin: 0 0 0.1rem 0;
     line-height: 1.3;
 }
 
 .project-organization {
-    font-size: 0.9rem;
+    font-size: 1.3rem;
     color: #666;
     margin: 0;
 }
@@ -326,6 +326,7 @@ img[src$='#floatright']
     line-height: 1.5;
     margin: 0 0 1rem 0;
     flex: 1;
+    font-size: 1.4rem;
 }
 
 .project-category {
