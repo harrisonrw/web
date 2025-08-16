@@ -1,0 +1,82 @@
+{{ define "title" }}
+  {{ .Title }} · {{ .Site.Title }}
+{{ end }}
+{{ define "content" }}
+  <section class="container page">
+    <article>
+      <!-- Page Title -->
+      <header>
+        <h1 class="title">
+          <a class="title-link" href="{{ .Permalink | safeURL }}">
+            {{ .Title }}
+          </a>
+        </h1>
+      </header>
+      
+      <!-- Hero Section -->
+      <div class="hero-section">
+        <div class="hero-container">
+          <div class="hero-content">
+            <div class="hero-carousel">
+              <div class="carousel-slides">
+                <!-- Slide 1 -->
+                <div class="carousel-slide active" data-slide="0">
+                  <div class="hero-text">
+                    <h1 class="hero-title">Thrive: Financial Intelligence</h1>
+                    <p class="hero-subtitle">AI-driven personal finance app for iOS.</p>
+                    <a href="#" class="hero-cta">Learn More</a>
+                  </div>
+                  <div class="hero-image">
+                    <img src="/images/thrive-hero.png" alt="Thrive" />
+                  </div>
+                </div>
+                
+                <!-- Slide 2 -->
+                <div class="carousel-slide" data-slide="1">
+                  <div class="hero-text">
+                    <h1 class="hero-title">GoPro Quik</h1>
+                    <p class="hero-subtitle">Video editor and media management app for macOS.</p>
+                    <a href="https://rwhtechnology.com/apps/speakcolors" class="hero-cta">Learn More</a>
+                  </div>
+                  <div class="hero-image">
+                    <img src="/images/quik-hero.png" alt="GoPro Quik" />
+                  </div>
+                </div>
+                
+                <!-- Slide 3 -->
+                <div class="carousel-slide" data-slide="2">
+                  <div class="hero-text">
+                    <h1 class="hero-title">TritonView</h1>
+                    <p class="hero-subtitle">Real-time monitoring of blood hemorraging during surgical procedures.</p>
+                    <a href="https://rwhtechnology.com/apps/beat-tracker" class="hero-cta">Learn More</a>
+                  </div>
+                  <div class="hero-image">
+                    <img src="/images/TritonView-hero.png" alt="TritonView" />
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            
+            <!-- Carousel Controls positioned outside carousel -->
+            <div class="carousel-controls">
+              <div class="carousel-dots">
+                <button class="carousel-dot active" onclick="currentSlide(1)"></button>
+                <button class="carousel-dot" onclick="currentSlide(2)"></button>
+                <button class="carousel-dot" onclick="currentSlide(3)"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Projects Content -->
+      {{ .Content }}
+    </article>
+  </section>
+  
+  {{ partial "posts/math.html" . }}
+  
+  <!-- Carousel JavaScript -->
+  <script src="/js/carousel.js"></script>
+{{ end }}
