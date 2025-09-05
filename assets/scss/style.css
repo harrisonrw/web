@@ -336,6 +336,13 @@ img[src$='#floatright']
     gap: 1rem;
 }
 
+.project-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
 .project-category {
     padding: 0.1rem 0.75rem;
     border-radius: 8px;
@@ -397,6 +404,46 @@ img[src$='#floatright']
 .projects-grid .project-card:nth-child(10) .project-category {
     background: #fdf2f8;
     color: #ec4899;
+}
+
+/* Project Tags */
+.project-tag {
+    padding: 0.1rem 0.5rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    display: inline-block;
+}
+
+/* Tag Colors - Each tag gets a unique color */
+.project-tag:nth-of-type(1) {
+    background: #f0f4ff;
+    color: #4338ca;
+}
+
+.project-tag:nth-of-type(2) {
+    background: #f0fdf4;
+    color: #16a34a;
+}
+
+.project-tag:nth-of-type(3) {
+    background: #fefce8;
+    color: #ca8a04;
+}
+
+.project-tag:nth-of-type(4) {
+    background: #fdf4ff;
+    color: #c026d3;
+}
+
+.project-tag:nth-of-type(5) {
+    background: #f0fdfa;
+    color: #0891b2;
+}
+
+.project-tag:nth-of-type(6) {
+    background: #fff7ed;
+    color: #ea580c;
 }
 
 .project-learn-more {
