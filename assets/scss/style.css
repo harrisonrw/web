@@ -273,7 +273,6 @@ img[src$='#floatright']
 
 .project-card {
     background: #fff;
-    border: 1px solid #e1e4e8;
     border-radius: 8px;
     padding: 1.5rem;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
