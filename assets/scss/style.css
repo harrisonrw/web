@@ -343,8 +343,8 @@ img[src$='#floatright']
 
 .project-header {
     display: flex;
+    flex-direction: row;
     align-items: flex-start;
-    justify-content: space-between;
     gap: 1rem;
 }
 
@@ -354,17 +354,20 @@ img[src$='#floatright']
 }
 
 .project-title {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     font-weight: 600;
     color: #333;
-    margin: 0 0 0.1rem 0;
-    line-height: 1.3;
+    margin: 0 0 0.25rem 0;
+    padding: 0;
+    line-height: 1;
 }
 
 .project-organization {
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     color: #666;
     margin: 0;
+    padding: 0;
+    line-height: 1;
 }
 
 .project-icon {
