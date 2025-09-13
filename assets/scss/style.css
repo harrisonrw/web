@@ -440,3 +440,79 @@ img[src$='#floatright']
         font-size: 0.85rem;
     }
 }
+
+/* Other Projects Section */
+.other-projects-section {
+    margin-top: 4rem;
+}
+
+.other-projects-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 2rem 0;
+    text-align: center;
+}
+
+/* Other Projects Grid - Same as main grid but without cover images */
+.other-projects-grid {
+    columns: 3;
+    column-gap: 2rem;
+    margin: 3rem 0;
+    padding: 0;
+}
+
+.other-projects-grid .project-card {
+    background: #fff;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    break-inside: avoid;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+}
+
+.other-projects-grid .project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.other-projects-grid .project-content {
+    padding: 0;
+}
+
+/* Responsive Other Projects Grid */
+@media (max-width: 1024px) {
+    .other-projects-grid {
+        columns: 2;
+        column-gap: 1.5rem;
+    }
+    
+    .other-projects-grid .project-card {
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .other-projects-grid {
+        columns: 1;
+        column-gap: 0;
+        margin: 2rem 0;
+    }
+    
+    .other-projects-grid .project-card {
+        margin-bottom: 1.5rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 1.25rem;
+    }
+    
+    .other-projects-grid .project-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+    
+    .other-projects-title {
+        font-size: 1.5rem;
+    }
+}
