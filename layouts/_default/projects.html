@@ -400,5 +400,57 @@
   {{ partial "posts/math.html" . }}
   
   <!-- Carousel JavaScript -->
-  <script src="/js/carousel.js"></script>
+  <script>
+    let currentSlideIndex = 0;
+    let autoSlideInterval;
+
+    function showSlide(index) {
+        const slides = document.querySelectorAll('.carousel-slide');
+        if (slides.length === 0) return;
+        
+        slides.forEach(slide => slide.classList.remove('active'));
+        
+        if (index >= slides.length) currentSlideIndex = 0;
+        if (index < 0) currentSlideIndex = slides.length - 1;
+        
+        if (slides[currentSlideIndex]) {
+            slides[currentSlideIndex].classList.add('active');
+        }
+    }
+
+    function nextSlide() {
+        currentSlideIndex++;
+        const slides = document.querySelectorAll('.carousel-slide');
+        if (currentSlideIndex >= slides.length) {
+            currentSlideIndex = 0;
+        }
+        showSlide(currentSlideIndex);
+    }
+
+    function startAutoSlide() {
+        autoSlideInterval = setInterval(nextSlide, 4000);
+    }
+
+    function stopAutoSlide() {
+        if (autoSlideInterval) {
+            clearInterval(autoSlideInterval);
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const slides = document.querySelectorAll('.carousel-slide');
+        
+        if (slides.length > 0) {
+            currentSlideIndex = 0;
+            showSlide(currentSlideIndex);
+            startAutoSlide();
+            
+            const carousel = document.querySelector('.hero-carousel');
+            if (carousel) {
+                carousel.addEventListener('mouseenter', stopAutoSlide);
+                carousel.addEventListener('mouseleave', startAutoSlide);
+            }
+        }
+    });
+  </script>
 {{ end }}

@@ -388,7 +388,7 @@ img[src$='#floatright']
 @media (max-width: 768px) {
     .projects-grid {
         grid-template-columns: 1fr;
-        gap: 1rem;
+        gap: 2.5rem;
         margin: 2rem 0;
     }
     
@@ -413,11 +413,11 @@ img[src$='#floatright']
     }
     
     .project-title {
-        font-size: 1rem;
+        font-size: 1.6rem;
     }
     
     .project-organization {
-        font-size: 0.85rem;
+        font-size: 1.4rem;
     }
     
     .project-icon {
@@ -483,7 +483,7 @@ img[src$='#floatright']
 @media (max-width: 768px) {
     .other-projects-grid {
         grid-template-columns: 1fr;
-        gap: 1rem;
+        gap: 2.5rem;
         margin: 2rem 0;
     }
     
