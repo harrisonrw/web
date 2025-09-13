@@ -262,17 +262,16 @@ img[src$='#floatright']
     }
 }
 
-/* Projects Grid Styles - Masonry Layout */
+/* Projects Grid Styles - Grid Layout */
 .projects-grid {
-    columns: 3;
-    column-gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
     margin: 3rem 0;
     padding: 0;
 }
 
 .project-card {
-    margin-bottom: 2rem;
-    break-inside: avoid;
     display: flex;
     flex-direction: column;
 }
@@ -378,27 +377,19 @@ img[src$='#floatright']
     flex-shrink: 0;
 }
 
-/* Responsive Masonry Grid */
+/* Responsive Grid */
 @media (max-width: 1024px) {
     .projects-grid {
-        columns: 2;
-        column-gap: 1.5rem;
-    }
-    
-    .project-card {
-        margin-bottom: 1.5rem;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
     }
 }
 
 @media (max-width: 768px) {
     .projects-grid {
-        columns: 1;
-        column-gap: 0;
+        grid-template-columns: 1fr;
+        gap: 1rem;
         margin: 2rem 0;
-    }
-    
-    .project-card {
-        margin-bottom: 1.5rem;
     }
     
     .project-image-container {
@@ -456,8 +447,9 @@ img[src$='#floatright']
 
 /* Other Projects Grid - Same as main grid but without cover images */
 .other-projects-grid {
-    columns: 3;
-    column-gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
     margin: 3rem 0;
     padding: 0;
 }
@@ -465,8 +457,6 @@ img[src$='#floatright']
 .other-projects-grid .project-card {
     background: #fff;
     border-radius: 12px;
-    margin-bottom: 2rem;
-    break-inside: avoid;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -485,24 +475,19 @@ img[src$='#floatright']
 /* Responsive Other Projects Grid */
 @media (max-width: 1024px) {
     .other-projects-grid {
-        columns: 2;
-        column-gap: 1.5rem;
-    }
-    
-    .other-projects-grid .project-card {
-        margin-bottom: 1.5rem;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
     }
 }
 
 @media (max-width: 768px) {
     .other-projects-grid {
-        columns: 1;
-        column-gap: 0;
+        grid-template-columns: 1fr;
+        gap: 1rem;
         margin: 2rem 0;
     }
     
     .other-projects-grid .project-card {
-        margin-bottom: 1.5rem;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         padding: 1.25rem;
     }
