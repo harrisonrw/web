@@ -3,7 +3,9 @@ languageCode = "en-us"
 title = "Robert Harrison"
 theme = "hugo-coder"
 
-paginate = 20
+[pagination]
+pagerSize = 20
+
 canonifyurls = true
 
 pygmentsstyle = "monokai"
