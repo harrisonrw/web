@@ -18,10 +18,10 @@
                 <div class="carousel-slide active" data-slide="0">
                   <div class="hero-text">
                     <h1 class="hero-title">{{ .Title }}</h1>
-                    <p class="hero-subtitle">AI-driven personal finance app for iOS.</p>
+                    <p class="hero-subtitle">{{ .Params.hero_subtitle | default "Project description" }}</p>
                   </div>
                   <div class="hero-image">
-                    <img src="/images/thrive-hero.png" alt="{{ .Title }}" />
+                    <img src="{{ .Params.hero_image | default "/images/default-hero.png" }}" alt="{{ .Title }}" />
                   </div>
                 </div>
               </div>

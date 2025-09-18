@@ -3,6 +3,8 @@ date = 2024-09-16
 title = "Thrive: Financial Intelligence"
 slug = "thrive"
 layout = "single"
+hero_subtitle = "AI-driven personal finance app for iOS."
+hero_image = "/images/thrive-hero.png"
 +++
 
 ## Overview
