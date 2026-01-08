@@ -18,8 +18,9 @@ enableEmoji = true
 
 [params]
     author = "Robert Harrison"
-    info = "Software Engineer"
-    description = "iOS + watchOS + macOS"
+    info = "Senior Software Engineer · iOS & macOS"
+    description = "Building complex, media-rich and data-driven apps"
+    summary = "15+ years of experience shipping production Apple-platform apps across video, fintech, and health — owning architecture, performance, and delivery from prototype to App Store."
     keywords = "blog,app,developer,software,personal,iOS,watchOS,macOS,swift"
     avatarurl = "images/rharrison-500px.jpg"
 

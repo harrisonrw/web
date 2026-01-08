@@ -4,4 +4,6 @@
 {{ else }}
 <h2>{{ .Site.Params.info | markdownify }}</h2>
 <h2>{{ .Site.Params.description | markdownify }} </h2>
+{{ with .Site.Params.summary }}<p>{{ . | markdownify }}</p>{{ end }}
+<p><a href="/projects/">View selected projects →</a></p>
 {{ end }}
