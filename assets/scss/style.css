@@ -1,19 +1,31 @@
 img[src$='#center']
 {
     display: block;
-    margin: 0.7rem auto; 
+    margin: 0.7rem auto;
 }
 
 img[src$='#floatleft']
 {
     float: left;
-    margin: 0.7rem;      
+    margin: 0.7rem;
 }
 
 img[src$='#floatright']
 {
     float: right;
-    margin: 0.7rem;      
+    margin: 0.7rem;
+}
+
+/* About Page Link Styles */
+.page article a {
+    color: #212121;
+    font-weight: 500;
+}
+
+.page article a:hover,
+.page article a:focus {
+    color: #1565c0;
+    text-decoration: underline;
 }
 
 /* Hero Section Styles */
